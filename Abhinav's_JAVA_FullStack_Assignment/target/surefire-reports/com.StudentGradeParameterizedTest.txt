@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------
+Test set: com.StudentGradeParameterizedTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.042 s <<< FAILURE! - in com.StudentGradeParameterizedTest
+com.StudentGradeParameterizedTest.testNegativeMarksThrowException(int)  Time elapsed: 0.014 s  <<< ERROR!
+java.lang.NoClassDefFoundError: org/junit/jupiter/api/Named
+Caused by: java.lang.ClassNotFoundException: org.junit.jupiter.api.Named
+
+com.StudentGradeParameterizedTest.testPassFailResult(int, int,String)  Time elapsed: 0.028 s  <<< ERROR!
+java.lang.NoClassDefFoundError: org/junit/jupiter/api/Named
+Caused by: java.lang.ClassNotFoundException: org.junit.jupiter.api.Named
+
+com.StudentGradeParameterizedTest.testValidMarksDoNotThrow(int)  Time elapsed: 0.029 s  <<< ERROR!
+java.lang.NoClassDefFoundError: org/junit/jupiter/api/Named
+Caused by: java.lang.ClassNotFoundException: org.junit.jupiter.api.Named
+
+com.StudentGradeParameterizedTest.testAverageCalculation(int, int, int, double)  Time elapsed: 0.03 s  <<< ERROR!
+java.lang.NoClassDefFoundError: org/junit/jupiter/api/Named
+Caused by: java.lang.ClassNotFoundException: org.junit.jupiter.api.Named
+
+com.StudentGradeParameterizedTest.testComplexAverage([I, double)  Time elapsed: 0.033 s  <<< ERROR!
+java.lang.NoSuchMethodError: 'boolean org.junit.platform.commons.util.CollectionUtils.isConvertibleToStream(java.lang.Class)'
+
