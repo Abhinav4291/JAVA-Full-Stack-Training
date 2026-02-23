@@ -11,14 +11,14 @@ public class MultiStudentGradeManagerTest {
     void testMultipleStudentsIndependent() {
         MultiStudentGradeManager manager = new MultiStudentGradeManager();
 
-        manager.addStudent("Aryan");
-        manager.addStudent("Rahul");
+        manager.addStudent("Abhi");
+        manager.addStudent("Ayush");
 
-        manager.addMarks("Aryan", 80);
-        manager.addMarks("Rahul", 40);
+        manager.addMarks("Abhi", 80);
+        manager.addMarks("Ayush", 40);
 
-        assertEquals(80.0, manager.calculateAverage("Aryan"));
-        assertEquals(40.0, manager.calculateAverage("Rahul"));
+        assertEquals(80.0, manager.calculateAverage("Abhi"));
+        assertEquals(40.0, manager.calculateAverage("Ayush"));
     }
 
     @Test
@@ -48,13 +48,13 @@ public class MultiStudentGradeManagerTest {
     void testGetTopper() {
         MultiStudentGradeManager manager = new MultiStudentGradeManager();
 
-        manager.addStudent("Aryan");
-        manager.addMarks("Aryan", 60);
+        manager.addStudent("Abhi");
+        manager.addMarks("Abhi", 60);
 
-        manager.addStudent("Rahul");
-        manager.addMarks("Rahul", 90);
+        manager.addStudent("Ayush");
+        manager.addMarks("Ayush", 90);
 
-        assertEquals("Rahul", manager.getTopper());
+        assertEquals("Ayush", manager.getTopper());
     }
 
     @Test
