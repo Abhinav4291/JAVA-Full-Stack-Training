@@ -9,7 +9,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 public class StudentGradeParameterizedTest {
 
-    // 1️⃣ ValueSource – valid positive marks should NOT throw exception
+
     @ParameterizedTest
     @ValueSource(ints = {10, 40, 75, 100})
     void testValidMarksDoNotThrow(int marks) {
@@ -17,7 +17,6 @@ public class StudentGradeParameterizedTest {
         Assertions.assertDoesNotThrow(() -> calculator.addMarks(marks));
     }
 
-    // 2️⃣ CsvSource – test multiple sets of marks and expected averages
     @ParameterizedTest
     @CsvSource({
             "50, 60, 70, 60.0",
@@ -33,7 +32,6 @@ public class StudentGradeParameterizedTest {
         Assertions.assertEquals(expectedAverage, calculator.calculateAverage());
     }
 
-    // 3️⃣ CsvSource – test PASS/FAIL results
     @ParameterizedTest
     @CsvSource({
             "50, 60, PASS",
@@ -48,7 +46,6 @@ public class StudentGradeParameterizedTest {
         Assertions.assertEquals(expectedResult, calculator.getResult());
     }
 
-    // 4️⃣ ValueSource – negative marks should throw exception
     @ParameterizedTest
     @ValueSource(ints = {-1, -10, -100})
     void testNegativeMarksThrowException(int marks) {
@@ -57,7 +54,6 @@ public class StudentGradeParameterizedTest {
                 () -> calculator.addMarks(marks));
     }
 
-    // 5️⃣ MethodSource – complex test data (multiple marks per student)
     static Stream<org.junit.jupiter.params.provider.Arguments> complexAverageData() {
         return Stream.of(
                 org.junit.jupiter.params.provider.Arguments.of(new int[]{80, 90, 100}, 90.0),
