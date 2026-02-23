@@ -6,16 +6,12 @@ import java.util.Map;
 public class MultiStudentGradeManager {
 
     private Map<String, StudentGradeCalculator> students = new HashMap<>();
-
-    // Add new student
     public void addStudent(String name) {
         if (students.containsKey(name)) {
             throw new IllegalArgumentException("Student already exists");
         }
         students.put(name, new StudentGradeCalculator());
     }
-
-    // Add marks for specific student
     public void addMarks(String name, int marks) {
         StudentGradeCalculator calculator = students.get(name);
 
@@ -25,8 +21,6 @@ public class MultiStudentGradeManager {
 
         calculator.addMarks(marks);
     }
-
-    // Calculate average for specific student
     public double calculateAverage(String name) {
         StudentGradeCalculator calculator = students.get(name);
 
@@ -36,8 +30,6 @@ public class MultiStudentGradeManager {
 
         return calculator.calculateAverage();
     }
-
-    // Get result for specific student
     public String getResult(String name) {
         StudentGradeCalculator calculator = students.get(name);
 
@@ -47,8 +39,6 @@ public class MultiStudentGradeManager {
 
         return calculator.getResult();
     }
-
-    // Get topper (highest average student)
     public String getTopper() {
         if (students.isEmpty()) {
             throw new IllegalStateException("No students available");
