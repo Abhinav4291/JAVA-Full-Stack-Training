@@ -4,15 +4,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class BankAccountTest {
-
-    // 1️⃣ Verify initial balance
+    
     @Test
     void testInitialBalance() {
         BankAccount account = new BankAccount(1000);
         assertEquals(1000, account.getBalance());
     }
 
-    // 2️⃣ Valid deposit increases balance
     @Test
     void testDepositIncreasesBalance() {
         BankAccount account = new BankAccount(500);
@@ -20,7 +18,6 @@ public class BankAccountTest {
         assertEquals(700, account.getBalance());
     }
 
-    // 3️⃣ Negative deposit throws exception
     @Test
     void testDepositNegativeThrowsException() {
         BankAccount account = new BankAccount(500);
@@ -29,7 +26,6 @@ public class BankAccountTest {
         });
     }
 
-    // 4️⃣ Valid withdrawal decreases balance
     @Test
     void testWithdrawDecreasesBalance() {
         BankAccount account = new BankAccount(1000);
@@ -37,7 +33,6 @@ public class BankAccountTest {
         assertEquals(700, account.getBalance());
     }
 
-    // 5️⃣ Withdraw more than balance throws exception
     @Test
     void testWithdrawMoreThanBalanceThrowsException() {
         BankAccount account = new BankAccount(500);
