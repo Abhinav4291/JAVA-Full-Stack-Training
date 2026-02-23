@@ -9,7 +9,6 @@ public class EmployeeServiceTest {
 
     EmployeeService service = new EmployeeService();
 
-    // 1️⃣ Salary > 50k filtered correctly
     @Test
     void testFilterSalaryAbove50k() {
 
@@ -26,7 +25,6 @@ public class EmployeeServiceTest {
         assertTrue(result.contains("C"));
     }
 
-    // 2️⃣ Salary <= 50k excluded
     @Test
     void testSalaryBelow50kExcluded() {
 
@@ -40,7 +38,6 @@ public class EmployeeServiceTest {
         assertTrue(result.isEmpty());
     }
 
-    // 3️⃣ Only names returned
     @Test
     void testOnlyNamesReturned() {
 
@@ -53,7 +50,6 @@ public class EmployeeServiceTest {
         assertEquals("A", result.get(0));
     }
 
-    // 4️⃣ Empty list
     @Test
     void testEmptyEmployeeList() {
 
@@ -64,7 +60,6 @@ public class EmployeeServiceTest {
         assertTrue(result.isEmpty());
     }
 
-    // 5️⃣ All employees meet condition
     @Test
     void testAllEmployeesAbove50k() {
 
