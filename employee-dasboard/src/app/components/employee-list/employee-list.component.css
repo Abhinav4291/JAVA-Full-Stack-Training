@@ -1,0 +1,126 @@
+.employee-list-card {
+  max-width: 1100px;
+  margin: 8px auto 32px;
+  padding: 16px 20px 24px;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(15, 35, 95, 0.2);
+  background: #ffffff;
+}
+
+.list-avatar {
+  background: linear-gradient(135deg, #3f51b5, #009688);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolbar-row {
+  display: flex;
+  justify-content: flex-end;
+  margin: 12px 0 16px;
+}
+
+.search-field {
+  width: 280px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.employee-table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.employee-row {
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease,
+    box-shadow 0.2s ease;
+}
+
+.employee-row:hover {
+  background: rgba(79, 70, 229, 0.04);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(15, 35, 95, 0.08);
+}
+
+.emp-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.emp-initials {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #3f51b5, #009688);
+  color: #fff;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.emp-name-text .primary {
+  font-weight: 600;
+}
+
+.emp-name-text .secondary {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.chip {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.chip-dept {
+  background: rgba(0, 150, 136, 0.08);
+  color: #00695c;
+}
+
+.actions-header,
+.actions-cell {
+  width: 56px;
+  text-align: right;
+}
+
+.no-data {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.no-data mat-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .employee-list-card {
+    margin: 8px 12px 24px;
+    padding: 12px 12px 20px;
+  }
+
+  .toolbar-row {
+    justify-content: stretch;
+  }
+
+  .search-field {
+    width: 100%;
+  }
+
+  .emp-name-text .secondary {
+    display: none;
+  }
+}
+

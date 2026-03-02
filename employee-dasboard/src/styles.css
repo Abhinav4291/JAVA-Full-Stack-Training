@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  background: #f5f7fb;
+}
+
+.snackbar-success {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.snackbar-warn {
+  background: #c62828;
+  color: #fff;
+}
+

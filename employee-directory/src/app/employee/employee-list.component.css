@@ -1,0 +1,131 @@
+.content {
+  padding: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: rgba(3, 10, 24, 0.9);
+  border-radius: 1.25rem;
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.03);
+  color: #e3f2fd;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-header-text h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.page-header-text p {
+  margin: 0.25rem 0 0;
+  opacity: 0.8;
+}
+
+.filter-field {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 1.5rem;
+}
+
+.summary-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.summary-card {
+  background: radial-gradient(circle at top left, #0d47a1 0, #001b3d 50%, #000d1f 100%);
+  color: #e3f2fd;
+}
+
+.summary-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+  margin-bottom: 0.35rem;
+}
+
+.summary-value {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.summary-caption {
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.table-container {
+  overflow: auto;
+}
+
+.full-width-table {
+  width: 100%;
+  min-width: 600px;
+}
+
+.actions-header,
+.actions-cell {
+  text-align: right;
+}
+
+.actions-cell {
+  padding-right: 1rem;
+}
+
+.empty-state {
+  text-align: center;
+  margin-top: 3rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.empty-state {
+  text-align: center;
+  margin-top: 3rem;
+  color: rgba(227, 242, 253, 0.8);
+}
+
+.mat-mdc-table {
+  background-color: transparent;
+}
+
+.mat-mdc-header-cell {
+  color: #bbdefb;
+}
+
+.mat-mdc-cell {
+  color: #e3f2fd;
+}
+
+.summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.9rem 1.1rem;
+}
+
+.summary-caption {
+  overflow-wrap: anywhere;
+}
+
+.content .mat-mdc-input-element,
+.content mat-label,
+.content .mdc-floating-label {
+  color: #e3f2fd !important;
+}
+
+.content .mat-mdc-input-element::placeholder {
+  color: rgba(227, 242, 253, 0.7);
+}
+

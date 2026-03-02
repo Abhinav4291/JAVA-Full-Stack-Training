@@ -1,0 +1,25 @@
+<div class="vw-shell">
+  <mat-toolbar color="primary" class="vw-toolbar">
+    <div class="vw-brand">
+      <img
+        src="Volkswagen_logo_2019.svg.png"
+        alt="Volkswagen logo"
+        class="vw-logo-image"
+        onerror="this.style.display='none'; this.nextElementSibling?.classList.add('vw-logo-fallback-visible');"
+      />
+      <span class="vw-logo-fallback" aria-hidden="true">VW</span>
+      <div class="vw-brand-text">
+        <span class="vw-brand-main">Volkswagen Group</span>
+        <span class="vw-brand-sub">Digital Solutions · Employee Directory</span>
+      </div>
+    </div>
+
+    <span class="spacer"></span>
+  </mat-toolbar>
+
+  <main class="vw-main">
+    <section class="vw-main-inner">
+      <router-outlet />
+    </section>
+  </main>
+</div>

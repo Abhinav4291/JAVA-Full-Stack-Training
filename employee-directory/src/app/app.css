@@ -1,0 +1,108 @@
+html,
+body {
+  height: 100%;
+}
+
+.vw-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top left, #0d47a1 0, #001528 40%, #000814 100%);
+}
+
+.vw-toolbar {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 31, 63, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.vw-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.vw-logo-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background-color: #ffffff;
+  padding: 2px;
+}
+
+.vw-logo-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.vw-logo-text {
+  color: #ffffff;
+}
+
+.vw-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.vw-toolbar .vw-brand-main,
+.vw-toolbar .vw-brand-sub {
+  color: #ffffff !important;
+}
+
+.vw-brand-main {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.vw-brand-sub {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+/* Fallback when logo image fails to load */
+.vw-logo-fallback {
+  display: none;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.vw-logo-fallback.vw-logo-fallback-visible {
+  display: flex !important;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.vw-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.vw-main-inner {
+  width: 100%;
+  max-width: 1200px;
+}
+

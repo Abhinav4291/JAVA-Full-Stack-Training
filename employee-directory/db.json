@@ -1,0 +1,28 @@
+{
+  "employees": [
+    {
+      "id": "e602",
+      "firstName": "Abhinav",
+      "lastName": "Abhinav",
+      "email": "abhinav4291@gmail.com",
+      "phone": "6206376781",
+      "department": "IT"
+    },
+    {
+      "id": "fba1",
+      "firstName": "Ayush",
+      "lastName": "Kumar",
+      "email": "ayush@vw.com",
+      "phone": "8709139171",
+      "department": "HR"
+    },
+    {
+      "id": "b1d3",
+      "firstName": "Priyanshu",
+      "lastName": "Sharma",
+      "email": "ps@vw.com",
+      "phone": "6202963394",
+      "department": "Finance"
+    }
+  ]
+}

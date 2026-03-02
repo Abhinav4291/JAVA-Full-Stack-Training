@@ -1,0 +1,92 @@
+<div class="content">
+  <div class="page-header">
+    <div class="page-header-text">
+      <h1>Employee Directory</h1>
+      <p>Overview of Volkswagen Group Digital Solutions staff</p>
+    </div>
+    <button mat-raised-button color="accent" (click)="onAddEmployee()">
+      <mat-icon>person_add</mat-icon>
+      Add Employee
+    </button>
+  </div>
+
+  <div class="summary-row">
+    <mat-card class="summary-card">
+      <div class="summary-label">Total employees</div>
+      <div class="summary-value">{{ totalEmployees() }}</div>
+      <div class="summary-caption">In Volkswagen Group Digital Solutions</div>
+    </mat-card>
+
+    <mat-card class="summary-card">
+      <div class="summary-label">Showing</div>
+      <div class="summary-value">{{ visibleEmployees() }}</div>
+      <div class="summary-caption" *ngIf="filterDepartment(); else allDepts">
+        Filtered by department: {{ filterDepartment() }}
+      </div>
+      <ng-template #allDepts>
+        <div class="summary-caption">All departments</div>
+      </ng-template>
+    </mat-card>
+  </div>
+
+  <mat-form-field appearance="outline" class="filter-field">
+    <mat-label>Filter by department or phone</mat-label>
+    <input
+      matInput
+      placeholder="e.g. IT, HR"
+      [value]="filterDepartment()"
+      (input)="filterDepartment.set($any($event.target).value)"
+    />
+  </mat-form-field>
+
+  <div class="table-container" *ngIf="filteredEmployees().length; else emptyState">
+    <table mat-table [dataSource]="filteredEmployees()" class="mat-elevation-z2 full-width-table">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let employee">
+          {{ employee.firstName }} {{ employee.lastName }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let employee">
+          {{ employee.email }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef>Phone</th>
+        <td mat-cell *matCellDef="let employee">
+          {{ employee.phone || '–' }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="department">
+        <th mat-header-cell *matHeaderCellDef>Department</th>
+        <td mat-cell *matCellDef="let employee">
+          {{ employee.department }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef class="actions-header">Actions</th>
+        <td mat-cell *matCellDef="let employee" class="actions-cell">
+          <button mat-icon-button color="warn" (click)="onDelete(employee)" aria-label="Delete">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+
+  <ng-template #emptyState>
+    <div class="empty-state">
+      <p>No employees found. Try changing the department filter or add a new employee.</p>
+    </div>
+  </ng-template>
+</div>
+
