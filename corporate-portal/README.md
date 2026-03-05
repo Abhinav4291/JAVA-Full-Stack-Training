@@ -1,4 +1,4 @@
-# Assignment 4: Corporate Portal Routing
+# Assignment: Corporate Portal Routing
 
 A React + Vite Corporate Portal with a professional grey/red UI theme, authentication flow, role-based controls, nested routes, and protected routes.
 
