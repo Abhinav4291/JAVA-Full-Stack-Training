@@ -1,0 +1,125 @@
+:root {
+  --bg: #141414;
+  --panel: #1f1f1f;
+  --panel-2: #2a2a2a;
+  --text: #efefef;
+  --muted: #bbbbbb;
+  --accent: #d62828;
+  --accent-2: #ef4444;
+  --border: #393939;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at 20% 20%, #262626, var(--bg));
+  color: var(--text);
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 560px;
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.45);
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 1.7rem;
+}
+
+.subtitle {
+  margin: 8px 0 22px;
+  color: var(--muted);
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-inline-size: 0;
+}
+
+label {
+  font-size: 0.95rem;
+  color: #dedede;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #4a4a4a;
+  background: #161616;
+  color: var(--text);
+  border-radius: 9px;
+  padding: 11px 12px;
+  outline: none;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+input:focus {
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.3);
+}
+
+button {
+  margin-top: 8px;
+  border: 0;
+  border-radius: 9px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #b91c1c, var(--accent));
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.error {
+  margin-top: -2px;
+  color: #f87171;
+  font-size: 0.86rem;
+}
+
+.output {
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #4b1f1f;
+  background: rgba(182, 37, 37, 0.09);
+}
+
+.output h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.output p {
+  margin: 8px 0;
+}
