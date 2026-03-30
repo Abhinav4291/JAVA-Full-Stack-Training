@@ -1,0 +1,56 @@
+.container {
+  text-align: center;
+}
+
+.tracker-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  color: blue;
+  text-shadow: 1px 1px 2px gray;
+}
+
+input {
+  width: 200px;
+  padding: 8px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+input:focus {
+  border: 1px solid green;
+  outline: none;
+}
+
+button {
+  padding: 8px 15px;
+  margin: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007acc;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005f99;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.result {
+  margin-top: 20px;
+}
